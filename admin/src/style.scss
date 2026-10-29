@@ -1,0 +1,179 @@
+/* Normalize / reset styles: start */
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #1d2327;
+  background: #f0f0f1;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --wp-blue: #2271b1;
+  --wp-blue-dark: #135e96;
+  --wp-border: #c3c4c7;
+  --wp-muted: #646970;
+  --sidebar: #1d2327;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 360px;
+  min-height: 100vh;
+  margin: 0;
+  font-size: 13px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure {
+  margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled,
+select:disabled {
+  cursor: not-allowed;
+  opacity: .58;
+}
+
+a {
+  color: var(--wp-blue);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--wp-blue-dark);
+  }
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+svg {
+  vertical-align: middle;
+}
+
+:focus-visible {
+  outline: 2px solid var(--wp-blue);
+  outline-offset: 2px;
+}
+/* Normalize / reset styles: end */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.button {
+  min-height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border: 1px solid #c3c4c7;
+  border-radius: 3px;
+  color: #2c3338;
+  background: #f6f7f7;
+  box-shadow: 0 1px 0 #c3c4c7;
+  white-space: nowrap;
+
+  &:hover:not(:disabled) {
+    border-color: #8c8f94;
+    color: #135e96;
+    background: #f0f0f1;
+  }
+
+  &--primary-outline {
+    border-color: var(--wp-blue);
+    color: var(--wp-blue);
+    background: #f6f7f7;
+    box-shadow: none;
+
+    &:hover:not(:disabled) {
+      border-color: var(--wp-blue-dark);
+      color: white;
+      background: var(--wp-blue-dark);
+    }
+  }
+
+  &--primary {
+    border-color: var(--wp-blue);
+    color: white;
+    background: var(--wp-blue);
+    box-shadow: 0 1px 0 var(--wp-blue-dark);
+
+    &:hover:not(:disabled) {
+      border-color: var(--wp-blue-dark);
+      color: white;
+      background: var(--wp-blue-dark);
+    }
+  }
+}
+
+.icon-button {
+  width: 32px;
+  height: 32px;
+  display: inline-grid;
+  place-items: center;
+  border: 0;
+  border-radius: 3px;
+  color: #50575e;
+  background: transparent;
+
+  &:hover {
+    color: #1d2327;
+    background: #f0f0f1;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    min-width: 360px;
+  }
+
+  .button {
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+}

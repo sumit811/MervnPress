@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Build output
+admin/dist/
+dist/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# macOS metadata
+.DS_Store
