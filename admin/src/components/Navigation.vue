@@ -24,7 +24,7 @@ defineEmits(['open-editor']);
       <RouterLink :class="{ 'sidebar-subnav__active': route.path === '/' }" to="/">All Posts</RouterLink>
       <button type="button" @click="$emit('open-editor')">Add New</button>
       <RouterLink :class="{ 'sidebar-subnav__active': route.path === '/categories' }" to="/categories">Categories</RouterLink>
-      <a href="#tags">Tags</a>
+      <RouterLink to="/tags">Tags</RouterLink>
     </div>
     <a class="sidebar-link" href="#media"><Image :size="17" /><span>Media</span></a>
     <a class="sidebar-link" href="#pages"><FileText :size="17" /><span>Pages</span></a>

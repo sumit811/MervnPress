@@ -23,20 +23,7 @@ const isSidebarOpen = ref(false);
 </template>
 
 <style lang="scss" scoped>
-.main-content {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  margin-left: 160px;
-  padding: 64px 22px 0 18px;
-}
 
-.screen-header {
-  min-height: 50px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-}
 
 h1 {
   margin: 0;
